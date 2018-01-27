@@ -5,7 +5,7 @@
 version: 2
 general:
   artifacts:
-    - "desktop/build/libs/*.jar"
+    - "desktop/build/libs/"
 jobs:
   build:
     docker:
