@@ -16,9 +16,6 @@ jobs:
 
     working_directory: ~/repo
 
-    artifacts:
-      - "desktop\build\libs"
-    
     environment:
       # Customize the JVM maximum heap limit
       JVM_OPTS: -Xmx3200m
@@ -43,6 +40,8 @@ jobs:
         
       # run tests!
       - run: gradle desktop:dist
-
+          artifacts: ""
+            - "desktop\build\libs"
+   
 
 
