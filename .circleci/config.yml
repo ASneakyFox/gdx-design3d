@@ -2,6 +2,9 @@
 #
 # Check https://circleci.com/docs/2.0/language-java/ for more details
 #
+general:
+  artifacts:
+    - "desktop\build\libs"
 version: 2
 jobs:
   build:
@@ -16,9 +19,7 @@ jobs:
 
     working_directory: ~/repo
 
-    general:
-      artifacts:
-        - "desktop\build\libs"
+
     
     environment:
       # Customize the JVM maximum heap limit
