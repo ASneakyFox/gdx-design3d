@@ -3,6 +3,9 @@
 # Check https://circleci.com/docs/2.0/language-java/ for more details
 #
 version: 2
+general:
+  artifacts:
+    - "desktop/build/libs/*.jar"
 jobs:
   build:
     docker:
@@ -40,8 +43,6 @@ jobs:
         
       # run tests!
       - run: gradle desktop:dist
-          artifacts: ""
-            - "desktop\build\libs"
    
 
 
